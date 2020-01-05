@@ -1,0 +1,13 @@
+<form [formGroup]="authForm" >
+    <input type = "text"placeholder = "User Name" formControlName="username" />
+    <br>
+    <input type = "password" placeholder = "Password" formControlName="password"/>
+    <br>
+    <button type = "submit" (click) = "onClickSubmit()">
+          <span *ngIf = "!registerMode">Login</span>
+          <span *ngIf = "registerMode">Register</span>
+    </button> 
+      
+</form>
+<span *ngIf = "!registerMode" (click)="registerMode = true">Click here for register</span>
+<span *ngIf = "registerMode" (click)="registerMode = false">Already have an account? click to login </span> 

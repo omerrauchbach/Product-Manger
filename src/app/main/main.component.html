@@ -1,0 +1,14 @@
+<button (click)="logout()">Logout</button>
+<div class = "layout1">
+    <app-products-list [products] = "products" (selectProduct)= "selectProduct($event)"
+     (editedProduct)="editProduct($event)" (createProduct) = "addProduct()"
+      (deletedProduct)="deletedProduct($event)"></app-products-list>
+    <app-user-list [users] = "users"> </app-user-list> 
+    <div>
+    <app-product-details [product]=this.selectedProducts (updateRating)="selectProduct($event)" ></app-product-details >
+    <app-product-form *ngIf="editedProduct" [product]="this.editedProduct"
+     (productCreated)=productCreated($event) (productUpdated)=productUpdated($event)></app-product-form>
+    </div>
+</div>
+    
+    

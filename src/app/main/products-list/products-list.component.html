@@ -1,0 +1,6 @@
+<div *ngFor="let product of products"  class="product-item">
+    <h2 (click)="productClicked(product)" >{{product['name']}}</h2>
+    <fa name="edit" (click)="editProduct(product)"></fa>
+    <fa name="trash" (click) = "deleteProduct(product)"></fa>
+</div>
+<button (click)="addProduct()">Add Product</button>

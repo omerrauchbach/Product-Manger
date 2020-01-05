@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 50%;
+    font-size: 0.8em;
+    margin:8px 0;
+    padding: 10px;
+}
+
+button{
+    
+    padding: 5px 10px;
+    border-radius: 2px;
+    outline: none;
+    font-weight: bold;
+    font-size: 0.8em;
+}
